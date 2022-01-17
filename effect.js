@@ -1,19 +1,19 @@
 $(window).load(function(){
-	$('.loading').fadeOut('slow');
-	$('.container').fadeIn('slow');
+	$('.loading').fadeOut(300);
+	$('.container').fadeIn(300);
 });
 $('document').ready(function(){
 		var vw;
 		$(window).resize(function(){
 			 vw = $(window).width()/2;
 			$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
-			$('#b11').animate({top:240, left: vw-350},600);
-			$('#b22').animate({top:240, left: vw-250},600);
-			$('#b33').animate({top:240, left: vw-150},600);
-			$('#b44').animate({top:240, left: vw-50},600);
-			$('#b55').animate({top:240, left: vw+50},600);
-			$('#b66').animate({top:240, left: vw+150},600);
-			$('#b77').animate({top:240, left: vw+250},600);
+			$('#b11').animate({top:240, left: vw-350},500);
+			$('#b22').animate({top:240, left: vw-250},500);
+			$('#b33').animate({top:240, left: vw-150},500);
+			$('#b44').animate({top:240, left: vw-50},500);
+			$('#b55').animate({top:240, left: vw+50},500);
+			$('#b66').animate({top:240, left: vw+150},500);
+			$('#b77').animate({top:240, left: vw+250},500);
 		});
 
 	$('#turn_on').click(function(){
@@ -150,17 +150,17 @@ $('document').ready(function(){
 		$('#b5').attr('id','b55')
 		$('#b6').attr('id','b66')
 		$('#b7').attr('id','b77')
-		$('#b11').animate({top:240, left: vw-350},700);
-		$('#b22').animate({top:240, left: vw-250},700);
-		$('#b33').animate({top:240, left: vw-150},700);
-		$('#b44').animate({top:240, left: vw-50},700);
-		$('#b55').animate({top:240, left: vw+50},700);
-		$('#b66').animate({top:240, left: vw+150},700);
-		$('#b77').animate({top:240, left: vw+250},700);
+		$('#b11').animate({top:240, left: vw-350},600);
+		$('#b22').animate({top:240, left: vw-250},600);
+		$('#b33').animate({top:240, left: vw-150},600);
+		$('#b44').animate({top:240, left: vw-50},600);
+		$('#b55').animate({top:240, left: vw+50},600);
+		$('#b66').animate({top:240, left: vw+150},600);
+		$('#b77').animate({top:240, left: vw+250},600);
 		$('.balloons').css('opacity','0.9');
 		$('.balloons h2').fadeIn(3000);
-		$(this).fadeOut('slow').delay(2000).promise().done(function(){
-			$('#story').fadeIn('slow');
+		$(this).fadeOut('slow').delay(1500).promise().done(function(){
+			$('#story').fadeIn('fast');
 		});
 	});
 	
@@ -173,9 +173,9 @@ $('document').ready(function(){
 		var i;
 
 		function msgLoop (i) {
-			$("p:nth-child("+i+")").fadeOut('slow').delay(2000).promise().done(function(){
+			$("p:nth-child("+i+")").fadeOut('fast').delay(1500).promise().done(function(){
 			i=i+1;
-			$("p:nth-child("+i+")").fadeIn('fast').delay(2000);
+			$("p:nth-child("+i+")").fadeIn('fast').delay(1500);
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
